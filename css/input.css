@@ -1,0 +1,13 @@
+.userinput {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.userinput input {
+    margin: auto;
+    font-family: helvetica;
+	padding: 5px; 			
+	text-align: left;
+	border: none;
+	box-shadow: 0px 0px 5px rgba(30,30,30,.7);
+}
