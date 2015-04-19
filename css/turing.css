@@ -66,3 +66,21 @@ body {
 	border-width: 13.0px 7.5px 0 7.5px;
 	border-color: #9fa8da transparent transparent;	
 }
+
+#turing-states {
+	border-collapse: collapse;
+}
+
+#turing-states td, #turing-states th {
+	text-align: center;
+	border: 1px solid black;
+	padding: 3px;
+}
+
+#turing-states tbody.paused td.current {
+	background: orange;
+}
+
+#turing-states td.current {
+	background: green;
+}

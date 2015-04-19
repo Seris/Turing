@@ -11,12 +11,54 @@
   <script type="text/javascript" src="js/widgets.js"></script>
   <script type="text/javascript" src="js/Turing.js"></script>
   <script type="text/javascript" src="js/algorithms.js"></script>
+  <script type="text/javascript" src="js/tape.js"></script>
+  <script type="text/javascript" src="js/states.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
   <h1 id="title">Machine de Turing</h1>
 
-  <table id="turing-ribbon"></table>
+  <table id="turing-ribbon"><tbody><tr></tr></tbody></table>
+
+  <table id="turing-states">
+    <thead>
+      <tr>
+        <th>Etat</th>
+        <th>Symbole lu</th>
+        <th>Symbole écrit</th>
+        <th>Mouvement</th>
+        <th>Nouvel état</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">E0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>Gauche</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>Gauche</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td rowspan="2">E1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>Gauche</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>Gauche</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
 
   <form method="get" id="turing-input">
     <input type="text" placeholder="Contenu de la machine de Turing">
@@ -32,7 +74,6 @@
     <button class="widget-button" id="start-algorithm"><img src="icons/glyphicons-175-pause.png" /></button>
     <button class="widget-button" id="start-algorithm"><img src="icons/glyphicons-176-stop.png" /></button>  
   </div>
-  
 
 </body>
 </html>

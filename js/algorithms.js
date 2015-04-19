@@ -3,7 +3,7 @@ Turing.Algorithms = [];
 Turing.Algorithms.push({
 	"name": "Multiplication par 2",
 	"alphabets": [0, 1],
-	"default_state": 0,
+	"defaultState": 0,
 
 	"states": [
 		[
@@ -42,7 +42,7 @@ Turing.Algorithms.push({
 			{
 				write: null,
 				move: "right",
-				next: false
+				next: -1
 			}
 		]
 	]
@@ -51,7 +51,7 @@ Turing.Algorithms.push({
 Turing.Algorithms.push({
 	"name": "Inversions des bits",
 	"alphabets": [0, 1],
-	"default_state": 0,
+	"defaultState": 0,
 
 	"states": [
 		[
@@ -90,7 +90,7 @@ Turing.Algorithms.push({
 			{
 				write: null,
 				move: "right",
-				next: false
+				next: -1
 			}
 		]
 	]
@@ -99,7 +99,7 @@ Turing.Algorithms.push({
 Turing.Algorithms.push({
 	"name": "Soustraction par 1",
 	"alphabets": [0, 1],
-	"default_state": 0,
+	"defaultState": 0,
 
 	"states": [
 		[
@@ -138,7 +138,7 @@ Turing.Algorithms.push({
 			{
 				write: null,
 				move: "right",
-				next: false
+				next: -1
 			}
 		],
 
@@ -158,7 +158,7 @@ Turing.Algorithms.push({
 			{
 				write: null,
 				move: "right",
-				next: false
+				next: -1
 			}
 		],
 	]
@@ -167,7 +167,7 @@ Turing.Algorithms.push({
 Turing.Algorithms.push({
 	"name": "Boucle Infinie",
 	"alphabets": [0, 1],
-	"default_state": 0,
+	"defaultState": 0,
 
 	"states": [
 		[
