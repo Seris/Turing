@@ -57,6 +57,14 @@ States.prototype.on_resume = function(brkpt){
     this.container.className = "";
 };
 
+States.prototype.bindStateElement = function(element, state){
+    var self = this;
+    element.addEventListener("click", function(){
+        if(!element.breakpoint){
+            self.turing.addBreakpoint();
+        }
+    });
+};
 
 States.prototype.display = function(){
     this.container.innerHTML = "";

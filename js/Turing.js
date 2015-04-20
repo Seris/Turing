@@ -54,6 +54,7 @@ Turing.prototype.end = function(){
 		return false;
 	}
 
+	this.nextAction = null;
 	this.alphabets.pop();
 	this.algorithmRunning = false;
 
@@ -97,6 +98,26 @@ Turing.prototype.checkAlgorithmAlphabetCompatibility = function(alphabets){
 	return true;
 };
 
+Turing.prototype.setTape = function(tape){
+	if(this.algorithmRunning){
+		return false;
+	}
+
+	if(this.alphabets !== null){
+		for (var i = 0; i < tape.length; i++) {
+			if(this.alphabets.indexOf(tape[i]) === -1){
+				this.emit("invalid-char-in-tape", tape);
+				return false;
+			}
+		}
+	}
+
+	this.tape = tape;
+	this.emit("new-tape", tape);
+
+	return true;
+};
+
 /*-----  End of Algorithm  ------*/
 
 
@@ -119,9 +140,11 @@ Turing.prototype.execNextAction = function(ignoreBreakpoint){
 		case Turing.WRITE:
 			this.do_write();
 			break;
+
 		case Turing.MOVE:
 			this.do_move();
 			break;
+
 		case Turing.NEXT:
 			this.do_next();
 			break;
@@ -175,6 +198,9 @@ Turing.prototype.do_next = function(){
 
 
 Turing.prototype.addBreakpoint = function(brkpt){
+	if(!brkpt.action){
+		brkpt.action = Turing.WRITE;
+	}
 	this.breakpoints.push(brkpt);
 };
 
@@ -325,4 +351,3 @@ Turing.prototype.removeAllListeners = function(event){
 Turing.WRITE = 0;
 Turing.MOVE = 1;
 Turing.NEXT = 2;
-Turing.ACTION_STR = ["write", "move", "next"];

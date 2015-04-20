@@ -5,7 +5,6 @@ window.addEventListener("load", function(){
     tape.fullUpdate();
 
     turing.loadAlgorithm(Turing.Algorithms[0]);
-    turing.addBreakpoint({state: 0, action: Turing.WRITE, once: true});
 
     turing.start();
 });
